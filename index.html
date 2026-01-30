@@ -1,98 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>ExoFly Dynamics</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{
-    margin:0;
-    background:#05070d;
-    color:white;
-    font-family:Arial;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
 }
 
+body{
+background:#05070d;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+
 nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#05070d;
-    padding:15px;
-    text-align:center;
-    z-index:1000;
+position:fixed;
+top:0;
+width:100%;
+padding:20px;
+background:rgba(5,7,13,0.9);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:center;
+gap:40px;
+z-index:1000;
 }
 
 nav a{
-    color:white;
-    margin:0 20px;
-    text-decoration:none;
-    font-weight:bold;
+color:white;
+text-decoration:none;
+font-weight:600;
+letter-spacing:1px;
 }
 
 nav a:hover{
-    color:#4da6ff;
+color:#4da6ff;
 }
+
+/* HERO */
 
 .hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(120deg,#05070d,#0d1b33);
+height:100vh;
+background:
+linear-gradient(rgba(5,7,13,0.7),rgba(5,7,13,0.9)),
+url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
 }
+
+.hero h1{
+font-size:70px;
+letter-spacing:2px;
+}
+
+.hero h3{
+color:#4da6ff;
+margin-top:10px;
+}
+
+.hero p{
+margin-top:20px;
+max-width:600px;
+opacity:0.85;
+}
+
+/* SECTION */
 
 section{
-    padding:80px 15%;
+padding:120px 12%;
 }
 
-h2{
-    color:#4da6ff;
+.section-title{
+font-size:40px;
+margin-bottom:20px;
+color:#4da6ff;
 }
+
+.section-text{
+font-size:18px;
+line-height:1.7;
+opacity:0.9;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.card{
+background:#0c1220;
+padding:35px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(77,166,255,0.3);
+}
+
+.card h4{
+margin-bottom:10px;
+color:#4da6ff;
+}
+
+/* IMAGE SECTION */
+
+.image-block{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.image-block img{
+width:100%;
+border-radius:12px;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+padding:40px;
+text-align:center;
+opacity:0.7;
+}
+
+@media(max-width:800px){
+.hero h1{font-size:45px;}
+.image-block{grid-template-columns:1fr;}
+}
+
 </style>
-
 </head>
+
 <body>
 
 <nav>
 <a href="#about">About</a>
 <a href="#vision">Vision</a>
-<a href="#work">Work</a>
+<a href="#tech">Direction</a>
 <a href="#contact">Contact</a>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
 <h1>ExoFly Dynamics</h1>
 <h3>Fly To Vacuum</h3>
-<p>Redefining Access To Space</p>
+<p>Redefining Access To Space Through Reusable Aerospace Systems</p>
 </div>
 
+<!-- ABOUT -->
 <section id="about">
-<h2>About Us</h2>
-<p>
-ExoFly Dynamics (ExD) is an Indian aerospace startup concept focused on reusable
-space transportation systems and next-generation space access technologies.
+<h2 class="section-title">About ExD</h2>
+<p class="section-text">
+ExoFly Dynamics (ExD) is an Indian aerospace startup concept focused on developing
+reusable space transportation platforms that bridge atmospheric flight and space operations.
 </p>
+
+<div class="cards">
+<div class="card">
+<h4>Reusable Systems</h4>
+<p>Aircraft-like operations for space missions.</p>
+</div>
+
+<div class="card">
+<h4>Rapid Turnaround</h4>
+<p>Designed for fast reuse and minimal refurbishment.</p>
+</div>
+
+<div class="card">
+<h4>Scalable Architecture</h4>
+<p>Built to evolve toward orbital capability.</p>
+</div>
+</div>
 </section>
 
+<!-- IMAGE + VISION -->
 <section id="vision">
-<h2>Our Vision</h2>
-<p>
-To make spaceflight affordable, reusable, and operationally efficient.
+<div class="image-block">
+<div>
+<h2 class="section-title">Our Vision</h2>
+<p class="section-text">
+To make spaceflight repeatable, affordable and operationally efficient,
+enabling humanity to expand beyond Earth.
 </p>
+</div>
+
+<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa">
+</div>
 </section>
 
-<section id="work">
-<h2>What We Are Working Toward</h2>
-<p>
-Reusable spaceplane architectures, advanced propulsion concepts,
-and suborbital validation platforms.
-</p>
+<!-- TECH -->
+<section id="tech">
+<h2 class="section-title">What We Are Working Toward</h2>
+
+<div class="cards">
+<div class="card">
+<h4>Spaceplane Architectures</h4>
+<p>Hybrid aircraft-spacecraft concepts.</p>
+</div>
+
+<div class="card">
+<h4>Advanced Propulsion</h4>
+<p>Research into next-gen propulsion pathways.</p>
+</div>
+
+<div class="card">
+<h4>Suborbital Validation</h4>
+<p>Incremental testing and validation.</p>
+</div>
+</div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
-<h2>Contact</h2>
-<p>Email: exd.helpdesk@zohomail.in</p>
+<h2 class="section-title">Contact</h2>
+<p class="section-text">
+Email: exd.helpdesk@zohomail.in
+</p>
 </section>
+
+<footer>
+© 2026 ExoFly Dynamics
+</footer>
 
 </body>
 </html>
