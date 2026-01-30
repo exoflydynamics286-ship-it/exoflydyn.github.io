@@ -6,19 +6,43 @@
 <style>
 body{
     margin:0;
-    background:#0b0f17;
+    background:#05070d;
     color:white;
     font-family:Arial;
 }
 
-header{
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#05070d;
+    padding:15px;
     text-align:center;
-    padding:60px;
-    background:black;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    margin:0 20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#4da6ff;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(120deg,#05070d,#0d1b33);
 }
 
 section{
-    padding:60px 15%;
+    padding:80px 15%;
 }
 
 h2{
@@ -29,13 +53,20 @@ h2{
 </head>
 <body>
 
-<header>
+<nav>
+<a href="#about">About</a>
+<a href="#vision">Vision</a>
+<a href="#work">Work</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
 <h1>ExoFly Dynamics</h1>
 <h3>Fly To Vacuum</h3>
 <p>Redefining Access To Space</p>
-</header>
+</div>
 
-<section>
+<section id="about">
 <h2>About Us</h2>
 <p>
 ExoFly Dynamics (ExD) is an Indian aerospace startup concept focused on reusable
@@ -43,24 +74,24 @@ space transportation systems and next-generation space access technologies.
 </p>
 </section>
 
-<section>
+<section id="vision">
 <h2>Our Vision</h2>
 <p>
 To make spaceflight affordable, reusable, and operationally efficient.
 </p>
 </section>
 
-<section>
+<section id="work">
 <h2>What We Are Working Toward</h2>
 <p>
-Research and development of reusable spaceplane architectures,
-advanced propulsion concepts, and suborbital testing platforms.
+Reusable spaceplane architectures, advanced propulsion concepts,
+and suborbital validation platforms.
 </p>
 </section>
 
-<section>
+<section id="contact">
 <h2>Contact</h2>
-<p>Email: exoflydynamics286@gmail.com</p>
+<p>Email: exd.helpdesk@zohomail.in</p>
 </section>
 
 </body>
